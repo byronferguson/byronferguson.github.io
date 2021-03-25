@@ -1,0 +1,263 @@
+:root {
+  --dark: #1a1b4b;
+  --dark-mid: #292a73;
+  --light-mid: #3e4491;
+  --light: #3a9efd;
+  --accent: #f7a400;
+  --page-margin: 0 2rem;
+  --serif: Constantia, 'Lucida Bright', Lucidabright, 'Lucida Serif', Lucida,
+    'DejaVu Serif', 'Bitstream Vera Serif', 'Liberation Serif', Georgia, serif;
+  --sans-serif: Frutiger, 'Frutiger Linotype', Univers, Calibri, 'Gill Sans',
+    'Gill Sans MT', 'Myriad Pro', Myriad, 'DejaVu Sans Condensed',
+    'Liberation Sans', 'Nimbus Sans L', Tahoma, Geneva, 'Helvetica Neue',
+    Helvetica, Arial, sans-serif;
+  --border: 2px solid var(--accent);
+}
+
+html {
+  background-color: var(--dark);
+  font-size: 16px;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  line-height: 2rem;
+  color: #fff;
+  background-color: #fff;
+  font-family: var(--sans-serif);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--serif);
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.75rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+h4 {
+  font-size: 1.25rem;
+}
+
+h5 {
+  font-size: 1rem;
+}
+
+h6 {
+  font-size: 0.75rem;
+}
+
+a {
+  color: var(--text);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--accent);
+}
+
+header {
+  grid-area: header;
+  background-color: var(--dark);
+}
+
+header {
+  margin: 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0.5rem 1rem;
+}
+
+header > nav > ul {
+  list-style-type: none;
+  display: inline-flex;
+}
+
+header > nav > ul > li::after {
+  content: '|';
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  color: var(--accent);
+}
+
+header > nav > ul > li:last-child::after {
+  content: unset;
+  margin-right: unset;
+}
+
+#about-me,
+#my-projects,
+#follow-me,
+#contact-me {
+  padding: 2rem;
+}
+
+#about-me {
+  /* background-color: var(--dark); */
+  background: linear-gradient(180deg, var(--dark) 0%, var(--dark-mid) 100%);
+}
+
+#about-me img {
+  margin: 0 auto;
+  position: relative;
+}
+
+#about-me h1,
+#my-projects h1,
+#follow-me h1,
+#contact-me h1 {
+  border-bottom: var(--border);
+  letter-spacing: 0.25rem;
+  text-transform: uppercase;
+}
+
+#about-me p {
+  margin: var(--page-margin);
+}
+
+#my-projects {
+  /* background-color: var(--dark-mid); */
+  background: linear-gradient(
+    180deg,
+    var(--dark-mid) 0%,
+    var(--light-mid) 100%
+  );
+}
+
+#my-projects #projects {
+}
+
+.project-card {
+  margin: 1rem;
+  padding: 0;
+  border: var(--border);
+  border-radius: 0.5rem;
+}
+
+.project-card figure {
+  position: relative;
+  margin: 0;
+}
+
+.project-card h3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  margin: 0;
+  padding: 0.5rem;
+  color: var(--dark);
+  background: #3a9efdaa;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
+
+.project-card img {
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
+
+.project-card figcaption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 0.5rem;
+  background: var(--dark);
+  opacity: 0.8;
+  text-align: center;
+}
+
+.project-card ul {
+  list-style-type: none;
+  display: inline-flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 1rem;
+  width: 100%;
+}
+
+.project-card ul > li {
+  color: #000;
+  background-color: var(--accent);
+  flex: 1 0 5rem;
+  max-width: 5rem;
+  text-align: center;
+  margin: 0.5rem;
+  border-radius: 1rem;
+}
+
+#follow-me {
+  /* background-color: var(--light-mid); */
+  background: linear-gradient(180deg, var(--light-mid) 0%, var(--light) 100%);
+}
+
+#contact-me {
+  background-color: var(--light);
+  border-bottom: var(--border);
+}
+
+footer {
+  position: relative;
+  background-color: var(--dark);
+  padding: 0.5rem 0;
+  text-align: center;
+}
+
+footer h6 {
+  margin: 0;
+  padding: 0;
+}
+
+footer img {
+  position: absolute;
+  left: 3rem;
+  bottom: 0;
+  height: 5rem;
+  width: auto;
+}
+
+/* 'sm': '640px', */
+@media screen and (min-width: 640px) {
+}
+
+/* 'md': '768px', */
+@media screen and (min-width: 768px) {
+}
+
+/* 'lg': '1024px', */
+@media screen and (min-width: 1024px) {
+  html {
+    font-size: 18px;
+  }
+}
+
+/* 'xl': '1280px', */
+@media screen and (min-width: 1280px) {
+  html {
+    font-size: 20px;
+  }
+}
+
+/* '2xl': '1536px', */
+@media screen and (min-width: 1536px) {
+  html {
+    font-size: 24px;
+  }
+}
